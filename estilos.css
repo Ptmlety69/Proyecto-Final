@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+body{
+    background: url('fondo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+.contenedor{
+   background-color: rgb(200, 173, 139);
+    height: 90px;
+    padding: 10px;
+    text-align: center;
+    color: rgb(239, 238, 236);
+    text-shadow: 3px 5px 5px rgb(130, 97, 51);
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.temas{
+    display: inline-block;
+    position: relative;
+}
+.temas a{
+text-decoration: none;
+color: black;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+display: block;
+padding: 10px 15px;
+}
+button{
+    border: 0;
+    background-image: url(icont.png);
+    padding: 20px;
+    background-size: cover;
+    box-shadow: 3px 3px 5px 3px black;
+    cursor:pointer;
+    position: relative;
+    left: 745px;
+    
+    top: -80px;
+    } 
+.contenido{
+        display: none;
+        background-color: rgb(192, 162, 120);
+        position: absolute;
+        min-width: 100px;
+        left: 650px;
+        margin-top: -70px;
+        box-shadow: 3px 3px 5px 3px black;
+        }
+.temas:hover.contenido{
+    display: block;
+}
+        .contenido .normal:hover{
+        background-color: rgb(236, 210, 157);
+        }
+        .contenido .primavera:hover{
+         background-color: rgb(139, 218, 133);
+        } 
+        .contenido .invierno:hover{
+            background-color: rgb(165, 189, 224);
+           }  
+        .contenido .verano:hover{
+            background-color: rgb(237, 223, 65);
+           }  
+           .contenido .otoño:hover{
+            background-color: rgb(239, 178, 35);
+           }  
+        .temas:hover .contenido{
+            display: block;
+            }
+
+        /* hasta aqui solo puse los estilos que van en el contenido y temas */
+        

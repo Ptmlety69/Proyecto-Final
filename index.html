@@ -6,26 +6,101 @@
     <title>Fruteria</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body> 
+    
     <div class="contenedor"> 
         <header class="header">
         <h1>Fruteria</h1>
         
-     </header>
+    
      
-        <div class="temas">
-            <button>Temas</button>
-            <div class="contenido">
-            <a class="normal"href="">Normal</a>
-            <a class="primavera" href="">Primavera</a>
-            <a class="otoño" href="">Otoño</a>
-            <a class="vera no" href="">Verano</a>
-            <a class="invierno" href="">Invierno</a>
+        <div class="temas">     
+            <button id="boton">
+                
+            </button>
+            <div class="contenido" id="contenido">
+            <a class="normal"href="" id="n">Normal</a>
+            <a class="primavera" href="" id="p">Primavera</a>
+            <a class="otoño" href="" id="o">Otoño</a>
+            <a class="verano" href="" id="v">Verano</a>
+            <a class="invierno" href="" id="i">Invierno</a>
             </div>
             </div>
     </div>
      
-    
+     </header>
+
+     <main>
+        <div class="registro">
+            <h2>Iniciar Secion</h2>
+
+            <fieldset>
+                <legend>Ingrese sus datos</legend>
+                <label for="nombre"> Usuario : </label>
+                <input type="text" id="usuario" name="usuario"><br><br>
+                <label for="contraseña"> Contraseña : </label>
+                <input type="password" id="contraseña" name="contraseña"><br><br>
+                <input type="submit" value="Iniciar Secion">    
+            </fieldset>
+
+        </div>
+<div class="productos">
+    <h2>Productos</h2>
+    <label for="productos">
+        Selecciona un producto: 
+    </label>
+    <select id="productos" name="productos">
+        <option value="manzana">Manzana</option>
+        <option value="pera">Pera</option>
+        <option value="durazno">Durazno</option>
+        <option value="mango">Mango</option>
+        <option value="sandia">Sandia</option>
+        <option value="uva">Uva</option>
+
+    </select>
+    <label for="cantidad">
+        Cantidad: 
+    </label>
+    <input type="number" name="cant" id="cnat" max="100"  step="1" required>
+    <br><br>
+    <label for="precio">
+        Precio: 
+    </label>
+    <input type="number" name="pr" id="pr" step="10" >
+    <fieldset>
+        <legend>Descuentos</legend>
+        <label for="descuento">Eligue el descuento correspondiente: </label>
+        <input type="radio" name="des" id="cinco" value="0.05"> 5% <br><br>
+        <input type="radio" name="des" id="diez" value="0.10"> 10%
+        <input type="radio" name="des" id="quince" value="0.15"> 15%
+    </fieldset>
+</div>
+
+<div id="Datos">
+    <table id="tabla" border="1px">
+       <thead>
+        <tr>
+            <th>Nombre del producto</th>
+            <th>Imagen</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Subtotal</th>
+            <th>Impuestos</th>
+            <th>Total</th>
+            <th>Opciones</th>
+        </tr>
+       </thead>
+       <tbody id="registrotabla"></tbody>
+       <tfoot>
+        <tr>
+            <td colspan="8" id="ntotal">
+                El total a pagar es:
+            </td>
+        </tr>
+       </tfoot>
+    </table>
+        </div>
+     </main>
     <script src="pf.js"></script>
 </body>
 </html>
