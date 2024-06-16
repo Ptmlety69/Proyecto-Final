@@ -37,7 +37,7 @@ button{
     box-shadow: 3px 3px 5px 3px black;
     cursor:pointer;
     position: relative;
-    left: 745px;
+    left: 739px;
     
     top: -80px;
     } 
@@ -73,4 +73,19 @@ button{
             }
 
         /* hasta aqui solo puse los estilos que van en el contenido y temas */
-        
+    
+#tabla{
+    background-color: #ffffff;
+    margin: 10px;
+    border: 2px black solid;
+}
+.registro{
+    margin: 10px;
+    background-color: #fff;
+    border: 2px black solid;
+}
+.productos{
+    margin: 10px;
+    background-color: #fff;
+    border: 2px black solid;
+}
