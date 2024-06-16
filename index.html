@@ -19,11 +19,12 @@
                 
             </button>
             <div class="contenido" id="contenido">
-            <a class="normal"href="" id="n">Normal</a>
-            <a class="primavera" href="" id="p">Primavera</a>
-            <a class="otoño" href="" id="o">Otoño</a>
-            <a class="verano" href="" id="v">Verano</a>
-            <a class="invierno" href="" id="i">Invierno</a>
+            <input type="button" value="Normal" onclick="normal()">
+            <input type="button" value="Invierno" onclick="invierno()">
+            <input type="button" value="Primavera" onclick="invierno()"> 
+            <input type="button" value="Otoño" onclick="invierno()">
+            <input type="button" value="Verano" onclick="invierno()">
+            <!-- modificar aquiiiiii -->
             </div>
             </div>
     </div>
@@ -32,7 +33,7 @@
 
      <main>
         <div class="registro">
-            <h2>Iniciar Secion</h2>
+            <h2>Iniciar Sesión</h2>
 
             <fieldset>
                 <legend>Ingrese sus datos</legend>
@@ -40,7 +41,7 @@
                 <input type="text" id="usuario" name="usuario"><br><br>
                 <label for="contraseña"> Contraseña : </label>
                 <input type="password" id="contraseña" name="contraseña"><br><br>
-                <input type="submit" value="Iniciar Secion">    
+                <input type="submit" value="Iniciar Sesión" id="IS">    
             </fieldset>
 
         </div>
@@ -70,7 +71,7 @@
     <fieldset>
         <legend>Descuentos</legend>
         <label for="descuento">Eligue el descuento correspondiente: </label>
-        <input type="radio" name="des" id="cinco" value="0.05"> 5% <br><br>
+        <input type="radio" name="des" id="cinco" value="0.05"> 5% 
         <input type="radio" name="des" id="diez" value="0.10"> 10%
         <input type="radio" name="des" id="quince" value="0.15"> 15%
     </fieldset>

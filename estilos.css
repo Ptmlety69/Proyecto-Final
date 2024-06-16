@@ -21,6 +21,7 @@ body{
 .temas{
     display: inline-block;
     position: relative;
+    bottom: 5px;
 }
 .temas a{
 text-decoration: none;
@@ -28,6 +29,7 @@ color: black;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 display: block;
 padding: 10px 15px;
+
 }
 button{
     border: 0;
@@ -44,11 +46,18 @@ button{
 .contenido{
         display: none;
         background-color: rgb(192, 162, 120);
-        position: absolute;
+        position: relative;
         min-width: 100px;
-        left: 650px;
-        margin-top: -70px;
+        left: 685px;
+        bottom: 78px;
         box-shadow: 3px 3px 5px 3px black;
+        padding: 10px;
+        input{
+            width: 100px;
+            height: 50px;
+            color: #33cc33;
+        }
+        
         }
 .temas:hover.contenido{
     display: block;
@@ -78,14 +87,17 @@ button{
     background-color: #ffffff;
     margin: 10px;
     border: 2px black solid;
+    padding: 3px;
 }
 .registro{
+    padding: 10px;
     margin: 10px;
-    background-color: #fff;
+    background: linear-gradient(to bottom right, #33cc33 0%, #ccff33 100%);
     border: 2px black solid;
 }
 .productos{
+    padding: 10px;
     margin: 10px;
-    background-color: #fff;
+    background-color: rgb(231, 231, 108);
     border: 2px black solid;
 }
