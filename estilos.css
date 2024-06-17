@@ -4,12 +4,15 @@
     
 }
 body{
+    
     background: url('fondo1.jpg');
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
+
   }
 .contenedor{
    background-color: rgb(200, 173, 139);
+   width: 1318px;
     height: 90px;
     padding: 10px;
     text-align: center;
@@ -21,7 +24,8 @@ body{
 .temas{
     display: inline-block;
     position: relative;
-    bottom: 5px;
+    bottom: 6px;
+ 
 }
 .temas a{
 text-decoration: none;
@@ -32,6 +36,7 @@ padding: 10px 15px;
 
 }
 button{
+    
     border: 0;
     background-image: url(icont.png);
     padding: 20px;
@@ -43,6 +48,32 @@ button{
     
     top: -80px;
     } 
+
+  .header,.boton{
+
+        width: 700px;
+    }
+  h1{
+   position: relative;
+   left: 40%;
+   animation: cambiarColor 3s infinite; 
+  }
+  
+
+  @keyframes cambiarColor {
+    0% {
+        color:green; 
+    }
+    50% {
+        color: black; 
+    }
+    100% {
+        color:green;
+    }
+}
+
+
+
 .contenido{
         display: none;
         background-color: rgb(192, 162, 120);
@@ -55,26 +86,26 @@ button{
         input{
             width: 100px;
             height: 50px;
-            color: #33cc33;
+            color: #000000;
         }
         
         }
 .temas:hover.contenido{
     display: block;
 }
-        .contenido .normal:hover{
+        .contenido #normal:hover{
         background-color: rgb(236, 210, 157);
         }
-        .contenido .primavera:hover{
+        .contenido #primavera:hover{
          background-color: rgb(139, 218, 133);
         } 
-        .contenido .invierno:hover{
+        .contenido #invierno:hover{
             background-color: rgb(165, 189, 224);
            }  
-        .contenido .verano:hover{
+        .contenido #verano:hover{
             background-color: rgb(237, 223, 65);
            }  
-           .contenido .otoño:hover{
+           .contenido #otoño:hover{
             background-color: rgb(239, 178, 35);
            }  
         .temas:hover .contenido{
@@ -90,14 +121,59 @@ button{
     padding: 3px;
 }
 .registro{
+    position: relative;
+    left: 20px;
+    width: 300px;
     padding: 10px;
     margin: 10px;
     background: linear-gradient(to bottom right, #33cc33 0%, #ccff33 100%);
-    border: 2px black solid;
+    border: 5px black solid;
 }
 .productos{
+    width: 500px;
     padding: 10px;
     margin: 10px;
-    background-color: rgb(231, 231, 108);
-    border: 2px black solid;
+    background: linear-gradient(to bottom right, #33cc33 0%, #ccff33 100%);
+    border: 5px black solid;
 }
+
+#Datos{
+    background-color: transparent;
+    position: relative;
+    left: 520px;
+    top: -450px;
+  
+}
+
+#d{
+    font: size 20px; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#usuario,#contraseña{
+
+           
+            border-radius: 5px;       
+    animation: cambiarColor1 3s infinite; 
+   }
+   
+ 
+   @keyframes cambiarColor1 {
+     0% {
+         color: gray; 
+     }
+     50% {
+         color: rgb(70, 75, 69); 
+     }
+     100% {
+         color: gray ;
+     }
+    }
+     #IS:hover{
+        background-color: rgb(224, 15, 15);
+        }
+    #p,#productos{
+        font-family: 'Courier New', Courier, monospace;
+        border-radius: 5px;  
+
+    }

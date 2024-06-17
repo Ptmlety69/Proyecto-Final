@@ -10,7 +10,8 @@
     
     <div class="contenedor"> 
         <header class="header">
-        <h1>Fruteria</h1>
+        <h1>FRUTERIA</h1>
+       
         
     
      
@@ -19,11 +20,11 @@
                 
             </button>
             <div class="contenido" id="contenido">
-            <input type="button" value="Normal" onclick="normal()">
-            <input type="button" value="Invierno" onclick="invierno()">
-            <input type="button" value="Primavera" onclick="invierno()"> 
-            <input type="button" value="Otoño" onclick="invierno()">
-            <input type="button" value="Verano" onclick="invierno()">
+            <input type="button" id="normal" value="Inicio" onclick="inicio()">
+            <input type="button" id="invierno" value="Invierno" onclick="invierno()">
+            <input type="button" id="primavera" value="Primavera" onclick="primavera()"> 
+            <input type="button" id="otoño" value="Otoño" onclick="otoño()">
+            <input type="button" id="verano" value="Verano" onclick="verano()">
             <!-- modificar aquiiiiii -->
             </div>
             </div>
@@ -35,11 +36,12 @@
         <div class="registro">
             <h2>Iniciar Sesión</h2>
 
+        
             <fieldset>
                 <legend>Ingrese sus datos</legend>
-                <label for="nombre"> Usuario : </label>
+                <label id="d" for="nombre"> Usuario : </label>
                 <input type="text" id="usuario" name="usuario"><br><br>
-                <label for="contraseña"> Contraseña : </label>
+                <label id="d" for="contraseña"> Contraseña : </label>
                 <input type="password" id="contraseña" name="contraseña"><br><br>
                 <input type="submit" value="Iniciar Sesión" id="IS">    
             </fieldset>
@@ -47,9 +49,7 @@
         </div>
 <div class="productos">
     <h2>Productos</h2>
-    <label for="productos">
-        Selecciona un producto: 
-    </label>
+    <label id="p" for="productos"> Selecciona un producto: </label>
     <select id="productos" name="productos">
         <option value="manzana">Manzana</option>
         <option value="pera">Pera</option>
@@ -59,25 +59,23 @@
         <option value="uva">Uva</option>
 
     </select>
-    <label for="cantidad">
-        Cantidad: 
-    </label>
-    <input type="number" name="cant" id="cnat" max="100"  step="1" required>
+    <br>
+    <label id="p" for="cantidad">Cantidad: </label>
+    <input type="number" name="cant" id="p" max="100"  step="1" required>
     <br><br>
-    <label for="precio">
-        Precio: 
-    </label>
-    <input type="number" name="pr" id="pr" step="10" >
+    <label id="p" for="precio">  Precio: </label>
+    <input type="number" name="pr" id="p" step="10" >
     <fieldset>
         <legend>Descuentos</legend>
-        <label for="descuento">Eligue el descuento correspondiente: </label>
+        <label id="p" for="descuento">Eligue el descuento correspondiente: </label>
+        <br>
         <input type="radio" name="des" id="cinco" value="0.05"> 5% 
         <input type="radio" name="des" id="diez" value="0.10"> 10%
         <input type="radio" name="des" id="quince" value="0.15"> 15%
     </fieldset>
 </div>
 
-<div id="Datos">
+<div  id="Datos">
     <table id="tabla" border="1px">
        <thead>
         <tr>
