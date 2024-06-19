@@ -47,33 +47,34 @@
     <form action="">
     <label id="p" for="productos"> Selecciona un producto: </label>
     <select id="productos" name="productos">
-        <option value="manzana">Manzana</option>
-        <option value="pera">Pera</option>
-        <option value="durazno">Durazno</option>
-        <option value="mango">Mango</option>
-        <option value="sandia">Sandia</option>
-        <option value="uva">Uva</option>
-
+        <option value="Manzana">Manzana</option>
+        <option value="Pera">Pera</option>
+        <option value="Durazno">Durazno</option>
+        <option value="Mango">Mango</option>
+        <option value="Sandia">Sandia</option>
+        <option value="Uva">Uva</option>
     </select>
     <br>
-    <label id="p" for="cantidad">Cantidad: </label>
-    <input type="number" name="cant" id="p" max="100"  step="1" required>
+    <label  for="cantidad">Cantidad: </label>
+    <input type="number" name="cant" id="cant" max="100"  step="1" min="1" required>
     <br><br>
-    <label id="p" for="precio">  Precio: </label>
-    <input type="number" name="pr" id="p" step="10" >
+    <label for="precio">  Precio: </label>
+    <input type="number" name="pr" id="prec" step="10" min="0" required>
     <fieldset>
         <legend>Descuentos</legend>
         <label id="p" for="descuento">Elije el impuesto correspondiente: </label>
         <br>
-        <input type="radio" name="des" id="cinco" value="0.05"> 5% 
-        <input type="radio" name="des" id="diez" value="0.10"> 10%
-        <input type="radio" name="des" id="quince" value="0.15"> 15%
+        <input type="radio" name="des" id="cinco" value="0.05" required> 5% 
+        <input type="radio" name="des" id="diez" value="0.10" required> 10%
+        <input type="radio" name="des" id="quince" value="0.15" required> 15%
         
    
     </fieldset>
     <br>
-<input type="submit" value="Agregar Fruta">
+<input type="submit" value="Agregar Fruta" id="Guardar">
+
 </form>
+<input type="submit" value="Vaciar Tabla" id="Vaciar">
 </div>
 
 <div  id="Datos">
