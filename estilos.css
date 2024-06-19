@@ -2,37 +2,46 @@
     box-sizing: border-box;
     margin: 0;
 }
-body{
-    background: url('fondo1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-.contenedor{
-   background-color: rgb(200, 173, 139);
-   width: 1318px;
+/* Header */
+header{ 
+    grid-area:h; 
+    background-color: rgb(168, 255, 251);
     height: 90px;
     padding: 10px;
     text-align: center;
     color: rgb(239, 238, 236);
-    text-shadow: 3px 5px 5px rgb(130, 97, 51);
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.temas{
+    box-shadow: 3px 3px 3px 3px black;
+    input{
+        width: 100px;
+        height: 50px;
+        color: #000000;
+    }
+    .contenido{
+        display: none;
+        background-color: rgb(120, 145, 192);
+        position: relative;
+        min-width: 100px;
+        left: 485px;
+        bottom: 78px;
+        box-shadow: 3px 3px 5px 3px black;
+        padding: 10px; 
+        }
+        
+    .temas{
     display: inline-block;
     position: relative;
     bottom: 6px;
+   
 }
-.temas a{
-text-decoration: none;
-color: black;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-display: block;
-padding: 10px 15px;
+input{
+    transition: 1s;
+    border-radius: 50px;
+}
 
-}
 button{
-    
     border: 0;
     background-image: url(icont.png);
     padding: 20px;
@@ -43,65 +52,62 @@ button{
     left: 739px;
     top: -80px;
     } 
+}
 
-  .header,.boton{
+/* Body */
+body{
+    background: url('fondo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template:
+    'h h'
+    'r t'
+    'p t'
+    'p t';
+    gap: 50px;
+  }
 
-        width: 700px;
-    }
+
+
   h1{
-   position: relative;
-   left: 40%;
    animation: cambiarColor 3s infinite; 
   }
   
 
   @keyframes cambiarColor {
     0% {
-        color:green; 
+        color:rgb(0, 4, 255); 
     }
     50% {
-        color: black; 
+        color: rgb(98, 112, 117); 
     }
     100% {
-        color:green;
+        color:rgb(0, 4, 255); 
     }
 }
-
-
-
-.contenido{
-        display: none;
-        background-color: rgb(192, 162, 120);
-        position: relative;
-        min-width: 100px;
-        left: 685px;
-        bottom: 78px;
-        box-shadow: 3px 3px 5px 3px black;
-        padding: 10px;
-        input{
-            width: 100px;
-            height: 50px;
-            color: #000000;
-        }
-        
-        }
 .temas:hover.contenido{
     display: block;
 }
         .contenido #normal:hover{
-        background-color: rgb(236, 210, 157);
+        background-color: rgb(0, 255, 242);
+        transform: scale(1.1);
         }
         .contenido #primavera:hover{
          background-color: rgb(139, 218, 133);
+         transform: scale(1.1);
         } 
         .contenido #invierno:hover{
             background-color: rgb(165, 189, 224);
+            transform: scale(1.1);
            }  
         .contenido #verano:hover{
             background-color: rgb(237, 223, 65);
+            transform: scale(1.1);
            }  
            .contenido #otoño:hover{
             background-color: rgb(239, 178, 35);
+            transform: scale(1.1);
            }  
         .temas:hover .contenido{
             display: block;
@@ -110,57 +116,37 @@ button{
         /* hasta aqui solo puse los estilos que van en el contenido y temas */
 #tabla{
     background-color: #ffffff;
-    margin: 10px;
     border: 2px black solid;
-    padding: 3px;
+    height: 500px;
+    width: 700px;
 }
 .registro{
-    position: relative;
-    left: 20px;
-    width: 300px;
     padding: 10px;
-    margin: 10px;
-    background: linear-gradient(to bottom right, #33cc33 0%, #ccff33 100%);
+    background: linear-gradient(to bottom right, #335ccc 0%, #ffffff 100%);
     border: 5px black solid;
+    grid-area: r;
+    margin-left: 100px;
 }
 .productos{
-    width: 500px;
     padding: 10px;
-    margin: 10px;
-    background: linear-gradient(to bottom right, #33cc33 0%, #ccff33 100%);
+    background: linear-gradient(to bottom right, #335ccc 0%, #ffffff 100%);
     border: 5px black solid;
+    grid-area: p;
+    margin-left: 100px;
 }
+
 #Datos{
-    background-color: transparent;
-    position: relative;
-    left: 520px;
-    top: -450px;
+    grid-area: t;
 }
 #d{
-    font: size 20px; 
-    font-family: 'Courier New', Courier, monospace;
+    font: size 30px; 
 }
-#usuario,#contraseña{   
-            border-radius: 5px;       
-    animation: cambiarColor1 3s infinite; 
-   }
-   
- 
-   @keyframes cambiarColor1 {
-     0% {
-         color: gray; 
-     }
-     50% {
-         color: rgb(70, 75, 69); 
-     }
-     100% {
-         color: gray ;
-     }
-    }
-     #IS:hover{
-        background-color: rgb(224, 15, 15);
+input{
+    transition: 1s;
+}
+     input:hover{
+        background-color: rgb(15, 224, 206);
         }
     #p,#productos{
-        font-family: 'Courier New', Courier, monospace;
         border-radius: 5px;  
     }

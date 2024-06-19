@@ -7,13 +7,9 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body> 
-    
-    <div class="contenedor"> 
-        <header class="header">
-        <h1>FRUTERIA</h1>
-       
+    <header>
         
-    
+        <h1>FRUTERIA</h1>
      
         <div class="temas">     
             <button id="boton">
@@ -25,30 +21,30 @@
             <input type="button" id="primavera" value="Primavera" onclick="primavera()"> 
             <input type="button" id="otoño" value="Otoño" onclick="otoño()">
             <input type="button" id="verano" value="Verano" onclick="verano()">
-            <!-- modificar aquiiiiii -->
             </div>
-            </div>
-    </div>
-     
-     </header>
+        </div>
+    </header>
 
-     <main>
+   
         <div class="registro">
             <h2>Iniciar Sesión</h2>
 
-        
             <fieldset>
                 <legend>Ingrese sus datos</legend>
+                <form action="">
                 <label id="d" for="nombre"> Usuario : </label>
                 <input type="text" id="usuario" name="usuario"><br><br>
                 <label id="d" for="contraseña"> Contraseña : </label>
                 <input type="password" id="contraseña" name="contraseña"><br><br>
-                <input type="submit" value="Iniciar Sesión" id="IS">    
+                <input type="submit" value="Iniciar Sesión" id="IS">
+            </form>    
             </fieldset>
 
         </div>
+
 <div class="productos">
     <h2>Productos</h2>
+    <form action="">
     <label id="p" for="productos"> Selecciona un producto: </label>
     <select id="productos" name="productos">
         <option value="manzana">Manzana</option>
@@ -67,12 +63,17 @@
     <input type="number" name="pr" id="p" step="10" >
     <fieldset>
         <legend>Descuentos</legend>
-        <label id="p" for="descuento">Eligue el descuento correspondiente: </label>
+        <label id="p" for="descuento">Elije el impuesto correspondiente: </label>
         <br>
         <input type="radio" name="des" id="cinco" value="0.05"> 5% 
         <input type="radio" name="des" id="diez" value="0.10"> 10%
         <input type="radio" name="des" id="quince" value="0.15"> 15%
+        
+   
     </fieldset>
+    <br>
+<input type="submit" value="Agregar Fruta">
+</form>
 </div>
 
 <div  id="Datos">
@@ -98,8 +99,7 @@
         </tr>
        </tfoot>
     </table>
-        </div>
-     </main>
+    </div>
     <script src="pf.js"></script>
 </body>
 </html>
