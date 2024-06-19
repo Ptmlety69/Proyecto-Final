@@ -150,3 +150,54 @@ input{
     #p,#productos{
         border-radius: 5px;  
     }
+
+
+
+/* estilos de la tabla :b */
+
+
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background:  #e6e6e6;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+thead tr {
+    background:  #357ab7;
+    color: #ffffff;
+    font-size: 20px;
+    border-bottom: 2px solid #2e5a8e;
+}
+
+tfoot td {
+    background:  #357ab7;
+    color: #ffffff;
+    text-align: right;
+    font-size: 20px;
+    border: none;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:hover {
+    background-color: #d1d1d1;
+}
+
+tfoot td{
+    text-align: left;
+    padding: 15px;
+    font-size: 22px;
+}
