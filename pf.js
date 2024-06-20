@@ -1,25 +1,25 @@
 function inicio() {
-    document.body.style.backgroundImage = "url('fondo1.jpg')";
+    document.body.style.backgroundImage = "url('frut inicio.jpeg')";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
-}
+} 
 function invierno() {
-    document.body.style.backgroundImage = "url('invierno.jpg')";
+    document.body.style.backgroundImage = "url('frut invierno.jpg')";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
 }
 function primavera() {
-    document.body.style.backgroundImage = "url('primavera.jpg')";
+    document.body.style.backgroundImage = "url('frut primavera.jpg')";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
 }
 function otoño() {
-    document.body.style.backgroundImage = "url('otoño.jpg')";
+    document.body.style.backgroundImage = "url('frut otoño.jpg')";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
 }
 function verano() {
-    document.body.style.backgroundImage = "url('verano.jpg')";
+    document.body.style.backgroundImage = "url('frut verano.jpg')";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
 }
