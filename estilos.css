@@ -24,7 +24,7 @@ header{
         background-color: rgb(120, 145, 192);
         position: relative;
         min-width: 100px;
-        left: 485px;
+        left: 400px;
         bottom: 78px;
         box-shadow: 3px 3px 5px 3px black;
         padding: 10px; 
@@ -41,15 +41,15 @@ input{
     border-radius: 50px;
 }
 
-button{
+#boton{
     border: 0;
     background-image: url(icont.png);
     padding: 20px;
     background-size: cover;
-    box-shadow: 3px 3px 5px 3px black;
+    box-shadow: 3px 3px 5px 3px rgb(21, 161, 255);
     cursor:pointer;
     position: relative;
-    left: 739px;
+    left: 600px;
     top: -80px;
     } 
 }

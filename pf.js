@@ -184,3 +184,7 @@ botonV.addEventListener("click", () => {
 
 
 //colocanco imagenes en la tabla
+
+IS.addEventListener("click", () => {
+    let confirma = confirm("Datos guardados correctamente")
+});
