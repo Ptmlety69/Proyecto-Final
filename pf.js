@@ -36,7 +36,7 @@ let quince=document.getElementById('quince')
 let botonG=document.getElementById('Guardar')
 let botonV=document.getElementById('Vaciar')
 
-
+let imgURL = '';
 
 
 
@@ -56,7 +56,7 @@ function carga() {
     productos.forEach((prod, indice) => {
         salida += `<tr>
                     <td>${prod.fruta}</td>
-                    <td>${prod.img}</td>
+                  <td><img src="${prod.img}" alt="${prod.fruta}" style="width: 100px; height: 100px; border-radius:50%;"></td>
                     <td>${prod.cant}</td>
                     <td>${prod.prec}</td>
                     <td>${prod.subt}</td>
@@ -70,7 +70,8 @@ function carga() {
 
                     
 
-    datos.innerHTML = salida
+    document.getElementById('registrotabla').innerHTML = salida;
+   
 }
 
 // botonA.addEventListener("click",()=>{
@@ -97,8 +98,30 @@ function carga() {
 //         carga()
 //     }
 // }
+ 
 
 botonG.addEventListener("click", () => {
+    //imagen
+ switch (frutas.value) {
+    case "Manzana":
+        imgURL = "manzana.jpg";
+        break;
+    case "Pera":
+        imgURL = "pera.jpg";
+        break;
+    case "Durazno":
+        imgURL = "durazno.jpg";
+        break;
+    case "Mango":
+        imgURL = "mango.jpg";
+        break;
+    case "Sandia":
+        imgURL = "sandia.jpg";
+        break;
+    case "Uva":
+        imgURL = "uva.jpg";
+        break;
+   }
     if(cinco.checked){
             impu=0.05
             }else if(diez.checked){
@@ -108,7 +131,7 @@ botonG.addEventListener("click", () => {
             }
     let prod = {
         fruta: frutas.value,
-        img: "pongan imagen porfaa",
+        img: imgURL,
         cant: cant.value,
         prec: prec.value,
         subt: (parseFloat(cant.value) * parseFloat(prec.value)),
@@ -157,3 +180,7 @@ botonV.addEventListener("click", () => {
 //     botones.style.display = "none"
 //     botones2.style.display = "flex"
 // }
+
+
+
+//colocanco imagenes en la tabla
