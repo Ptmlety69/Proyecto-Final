@@ -201,3 +201,35 @@ tfoot td{
     padding: 15px;
     font-size: 22px;
 }
+
+
+#generarPDF
+{
+  background-color: #3498db; 
+  color: #ffffff; 
+  border-color: #2e6da4; 
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  height: 40px;
+  width: 120px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+ 
+}
+
+#generarPDF:hover
+{
+    background-color: #2980b9;
+}
+
+#generarPDF:active
+{
+    background-color: #1a73e8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
