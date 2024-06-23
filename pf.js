@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", carga);
+
 function inicio() {
     document.body.style.backgroundImage = "url('frut inicio.jpeg')";
     document.body.style.backgroundSize = "cover";
@@ -45,8 +47,6 @@ let imgURL = '';
 let productos = [];
 let total = 0;
 
-document.addEventListener("DOMContentLoaded", carga);
-
 function carga() {
     if (localStorage.getItem("productos") === null) {
         productos = [];
@@ -54,6 +54,10 @@ function carga() {
         productos = JSON.parse(localStorage.getItem("productos"));
     }
 
+    mostrarProductosEnTabla();
+}
+
+function mostrarProductosEnTabla() {
     let salida = "";
     total = 0;
 
@@ -71,13 +75,24 @@ function carga() {
                 </tr>`;
         total += parseFloat(prod.tot);
     });
-    
+
     document.getElementById('registrotabla').innerHTML = salida;
-    document.getElementById('ntotal').textContent = `El total a pagar es: $${total.toFixed(2)}`;
+    document.getElementById('ntotal').textContent = `El total a pagar es: ${total.toFixed(2)}`
 }
 
+botonG.addEventListener("click", agregarProducto);
 
-botonG.addEventListener("click", () => {
+botonV.addEventListener("click", () => {
+    let confirma = confirm("¿Estás seguro de que quieres vaciar la tabla?");
+    if (confirma) {
+        localStorage.clear();
+        productos = [];
+        total = 0;
+        mostrarProductosEnTabla(); // Actualiza la tabla después de vaciarla
+    }
+});
+
+function agregarProducto() {
     switch (frutas.value) {
         case "Manzana":
             imgURL = "manzana.jpg";
@@ -117,38 +132,54 @@ botonG.addEventListener("click", () => {
         img: imgURL,
         cant: cant.value,
         prec: prec.value,
-        subt: subt,
-        imp: imp,
-        tot: tot
+        subt: subt.toFixed(2),  
+        imp: imp.toFixed(2),    
+        tot: tot.toFixed(2)     
     };
 
-    productos.push(prod);
-    localStorage.setItem("productos", JSON.stringify(productos));
-    carga();
-});
-
-botonV.addEventListener("click", () => {
-    let confirma = confirm("¿Estás seguro de que quieres vaciar la tabla?");
-    if (confirma) {
-        localStorage.clear();
-        productos = [];
-        total = 0;
-        carga();
+    if (botonG.textContent === "Actualizar") {
+       
+        let indice = botonG.dataset.indice;
+        productos[indice] = prod;
+        botonG.textContent = "Guardar"; 
+    } else {
+        productos.push(prod);
     }
+
+    localStorage.setItem("productos", JSON.stringify(productos));
+    mostrarProductosEnTabla(); 
+
+    
+    frutas.value = "";
+    cant.value = "";
+    prec.value = "";
+}
+
+IS.addEventListener("click", () => {
+    let confirma = confirm("Datos guardados correctamente");
 });
 
 function eliminar(indice) {
     total -= parseFloat(productos[indice].tot);
     productos.splice(indice, 1);
     localStorage.setItem("productos", JSON.stringify(productos));
-    carga();
+    mostrarProductosEnTabla(); 
 }
 
+function modificar(indice) {
 
-IS.addEventListener("click", () => {
-    let confirma = confirm("Datos guardados correctamente");
-});
+    let prod = productos[indice];
+    frutas.value = prod.fruta;
+    cant.value = prod.cant;
+    prec.value = prod.prec;
 
+
+    botonG.textContent = "Actualizar";
+
+    botonG.dataset.indice = indice;
+
+    mostrarProductosEnTabla();
+}
 
 //----------------------------------------------------//
 
