@@ -76,30 +76,6 @@ function carga() {
     document.getElementById('ntotal').textContent = `El total a pagar es: $${total.toFixed(2)}`;
 }
 
-// botonA.addEventListener("click",()=>{
-//     botones.style.display = "flex"
-//     botones2.style.display = "none"
-//     productos[indice].nombre=nombre.value
-//     productos[indice].rfc=rfc.value
-//     productos[indice].pues=pues.value
-//     productos[indice].suel=suel.value
-//     productos[indice].dt=dt.value
-//     productos[indice].imp=imp.value
-//     localStorage.setItem("productos",JSON.stringify(productos))
-//     carga()
-// })
-
-// function quitar(i) {
-//     botones.style.display = "none"
-//     botones2.style.display = "flex"
-//     let confirma = confirm("¿Estás seguro(a)(e) de que quieres Eliminar el alumno "+productos[i].nombre+"?")
-//     if (confirma) {
-//         productos.splice(i,1)
-//         localStorage.setItem("productos",JSON.stringify(productos))
-        
-//         carga()
-//     }
-// }
 
 botonG.addEventListener("click", () => {
     switch (frutas.value) {
@@ -168,34 +144,6 @@ function eliminar(indice) {
     carga();
 }
 
-// botonC.addEventListener("click", () => {
-//     let a = prompt("Nombre del trabajador a Eliminar")
-//     if (productos.find(alu => alu.nombre === a)) {
-//         productos = productos.filter(al => al.nombre != a);
-//         localStorage.setItem("productos", JSON.stringify(productos))
-//         carga()
-//     } else {
-//         alert("trabajador no existe")
-//     }
-// });
-
-// function eliminar(indice) {
-//     productos.splice(indice, 1)
-//     localStorage.setItem("productos", JSON.stringify(productos))
-//     carga()
-// }
-
-// function modificar(i) {
-//     indice=1
-//     nombre.value=productos[i].nombre
-//     rfc.value=productos[i].rfc
-//     pues.value=productos[i].pues
-//     suel.value=productos[i].suel
-//     dt.value=productos[i].dt
-//     imp.value=productos[i].imp
-//     botones.style.display = "none"
-//     botones2.style.display = "flex"
-// }
 
 IS.addEventListener("click", () => {
     let confirma = confirm("Datos guardados correctamente");
